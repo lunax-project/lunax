@@ -6,8 +6,12 @@ php:
     - 7.1
     - 7.2
 
+notifications:
+email: false
+
 before_script:
     - composer install --no-interaction
 
-notifications:
-email: false
+script:
+    - $COMPOSER_BIN_DIR/phpunit
+    - $COMPOSER_BIN_DIR/phpcs --standard=PSR2 src/
