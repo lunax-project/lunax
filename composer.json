@@ -1,0 +1,25 @@
+{
+  "name": "lunax/lunax",
+  "type": "library",
+  "require-dev": {
+      "phpunit/phpunit": "^7.0",
+      "brainmaestro/composer-git-hooks": "^2.4"
+  },
+  "authors": [
+      {
+          "name": "William Cunha",
+          "email": "williamoliveira2@hotmail.com"
+      }
+  ],
+  "require": {},
+  "autoload": {
+      "psr-4": {
+          "Lunax\\Lunax\\": "src/"
+      }
+  },
+  "extra": {
+    "hooks": {
+      "pre-push": "phpunit && echo pushing!"
+    }
+  }
+}
