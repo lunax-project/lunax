@@ -6,6 +6,10 @@ php:
     - 7
     - 7.1
     - 7.2
+    - hhvm
+
+before_script:
+    - composer install --no-interaction
 
 notifications:
 email: false
