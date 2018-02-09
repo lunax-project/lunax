@@ -18,7 +18,7 @@
     },
     "extra": {
         "hooks": {
-            "pre-push": "vendor/bin/phpunit && ./vendor/bin/phpcs src/ && echo pushing!"
+            "pre-push": "vendor/bin/phpunit && vendor/bin/phpcs --standard=PSR2 src/ && echo pushing!"
         }
     }
 }
