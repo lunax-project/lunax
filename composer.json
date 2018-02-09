@@ -19,7 +19,7 @@
   },
   "extra": {
     "hooks": {
-      "pre-push": "phpunit && echo pushing!"
+      "pre-push": "vendor/bin/phpunit && echo pushing!"
     }
   }
 }
