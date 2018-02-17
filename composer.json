@@ -16,9 +16,13 @@
     "autoload": {
         "psr-4": {"Lunax\\": "src/Lunax/Core/"}
     },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "sniffer": "vendor/bin/phpcs --standard=PSR2 src/ && echo pushing!"
+    },
     "extra": {
         "hooks": {
-            "pre-push": "vendor/bin/phpunit && vendor/bin/phpcs --standard=PSR2 src/ && echo pushing!"
+            "pre-push": "composer sniffer"
         }
     }
 }
